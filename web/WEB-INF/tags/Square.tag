@@ -5,5 +5,5 @@
 
 <%-- O conteúdo é especificado aqui --%>
 <button class="square">
-    <!-- A FAZER -->
+    ${value}
 </button>
