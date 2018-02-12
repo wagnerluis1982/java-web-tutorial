@@ -4,6 +4,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <%-- O conteúdo é especificado aqui --%>
+<form>
 <div>
     <div class="board-row">
         <t:Square value="0" />
@@ -21,3 +22,4 @@
         <t:Square value="8" />
     </div>
 </div>
+</form>

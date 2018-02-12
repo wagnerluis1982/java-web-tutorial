@@ -4,6 +4,6 @@
 <%@attribute name="value" %>
 
 <%-- O conteúdo é especificado aqui --%>
-<button class="square">
+<button class="square" name="square" value="${value}">
     ${value}
 </button>
