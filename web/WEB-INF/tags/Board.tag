@@ -1,4 +1,4 @@
-<%@tag description="O tabuleiro do jogo" pageEncoding="UTF-8"%>
+<%@tag description="O tabuleiro do jogo" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <%-- Outras tags requeridas para funcionar --%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>

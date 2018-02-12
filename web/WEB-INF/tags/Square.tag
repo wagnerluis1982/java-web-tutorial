@@ -1,4 +1,4 @@
-<%@tag description="Cada quadrado do tabuleiro" pageEncoding="UTF-8"%>
+<%@tag description="Cada quadrado do tabuleiro" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <%-- A lista de atributos dessa tag --%>
 <%@attribute name="value" %>

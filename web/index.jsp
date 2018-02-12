@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <%-- Tags requeridas para a página funcionar --%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>

@@ -1,4 +1,4 @@
-<%@tag description="Especifica o jogo" pageEncoding="UTF-8"%>
+<%@tag description="Especifica o jogo" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <%-- Outras tags requeridas para funcionar --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
