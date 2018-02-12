@@ -5,5 +5,5 @@
 
 <%-- O conteúdo é especificado aqui --%>
 <button class="square" name="square" value="${value}">
-    ${value}
+    ${gameSquares[value]}
 </button>
