@@ -9,7 +9,7 @@
     <head>
         <meta charset="utf-8">
         <title>Jogo da Velha</title>
-        <link rel="stylesheet" href="game.css"/>
+        <link rel="stylesheet" href="<c:url value="/game.css"/>" />
     </head>
     <body>
         <t:Game />
