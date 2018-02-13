@@ -4,11 +4,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<%-- Marca no quadrado clicado um X --%>
-<c:if test="${param['square'] != null}">
-    <c:set target="${gameSquares}" property="${param['square']}" value="X"/>
-</c:if>
-
 <%-- O conteúdo é especificado aqui --%>
 <c:set var="status" value="Próximo jogador: X" />
 
