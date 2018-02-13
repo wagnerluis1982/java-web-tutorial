@@ -17,7 +17,7 @@ public class GameServlet extends HttpServlet {
         // O jogo do usuário atual
         GameApp game = getGame(request);
 
-        // Marca o quadrado clicado com um X
+        // Marca o quadrado clicado
         String paramSquare = request.getParameter("square");
         game.clickSquare(paramSquare);
 

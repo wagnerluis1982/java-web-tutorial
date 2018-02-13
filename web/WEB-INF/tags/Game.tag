@@ -5,7 +5,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <%-- O conteúdo é especificado aqui --%>
-<c:set var="status" value="Próximo jogador: X" />
+<c:set var="status" value="Próximo jogador: ${game.turn}" />
 
 <div class="game">
     <div class="game-board">
