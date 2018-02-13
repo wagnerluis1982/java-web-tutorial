@@ -29,7 +29,10 @@ public class GameServlet extends HttpServlet {
         String paramSquare = request.getParameter("square");
         if (paramSquare != null) {
             int index = Integer.parseInt(paramSquare);
-            squares[index] = 'X';
+            // Modifica uma cópia do array e o coloca na sessão, no lugar do anterior.
+            Character[] squaresCopy = squares.clone();
+            squaresCopy[index] = 'X';
+            session.setAttribute("gameSquares", squaresCopy);
         }
 
         // Passa a requisição para outro componente
