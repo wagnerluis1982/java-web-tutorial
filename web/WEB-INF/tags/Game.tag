@@ -4,9 +4,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<%-- Variável da sessão requerida --%>
-<jsp:useBean id="gameSquares" class="java.util.HashMap" scope="session" />
-
 <%-- Marca no quadrado clicado um X --%>
 <c:if test="${param['square'] != null}">
     <c:set target="${gameSquares}" property="${param['square']}" value="X"/>

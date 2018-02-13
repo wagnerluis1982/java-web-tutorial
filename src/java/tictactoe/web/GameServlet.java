@@ -22,7 +22,7 @@ public class GameServlet extends HttpServlet {
             session.setAttribute("gameSquares", new HashMap());
         }
 
-        RequestDispatcher jsp = request.getRequestDispatcher("/index.jsp");
+        RequestDispatcher jsp = request.getRequestDispatcher("/WEB-INF/jsp/game.jsp");
         jsp.forward(request, response);
     }
 
