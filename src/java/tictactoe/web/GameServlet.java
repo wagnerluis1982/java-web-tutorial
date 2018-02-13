@@ -1,8 +1,6 @@
 package tictactoe.web;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,17 +18,18 @@ public class GameServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         // Tenta pegar a variável da sessão
-        Map squares = (Map) session.getAttribute("gameSquares");
+        Character[] squares = (Character[]) session.getAttribute("gameSquares");
 
         // Se a variável não existir, cria uma nova
         if (squares == null) {
-            session.setAttribute("gameSquares", squares = new HashMap());
+            session.setAttribute("gameSquares", squares = new Character[9]);
         }
 
         // Marca o quadrado clicado com um X
         String paramSquare = request.getParameter("square");
         if (paramSquare != null) {
-            squares.put(paramSquare, 'X');
+            int index = Integer.parseInt(paramSquare);
+            squares[index] = 'X';
         }
 
         // Passa a requisição para outro componente
