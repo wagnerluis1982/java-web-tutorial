@@ -19,7 +19,7 @@ public class GameServlet extends HttpServlet {
 
         // Marca o quadrado clicado com um X
         String paramSquare = request.getParameter("square");
-        clickSquare(paramSquare, game);
+        game.clickSquare(paramSquare);
 
         // Passa a requisição para outro componente
         RequestDispatcher jsp = request.getRequestDispatcher("/WEB-INF/jsp/game.jsp");
@@ -39,13 +39,6 @@ public class GameServlet extends HttpServlet {
         }
 
         return game;
-    }
-
-    private static void clickSquare(String param, GameApp game) {
-        if (param != null) {
-            int index = Integer.parseInt(param);
-            game.setSquare(index);
-        }
     }
 
 }
