@@ -5,7 +5,14 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <%-- O conteúdo é especificado aqui --%>
-<c:set var="status" value="Próximo jogador: ${game.turn}" />
+<c:choose>
+    <c:when test="${game.winner == ' '}">
+        <c:set var="status" value="Próximo jogador: ${game.turn}" />
+    </c:when>
+    <c:otherwise>
+        <c:set var="status" value="Vencedor: ${game.winner}" />
+    </c:otherwise>
+</c:choose>
 
 <div class="game">
     <div class="game-board">
