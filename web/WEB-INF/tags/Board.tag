@@ -1,10 +1,13 @@
 <%@tag description="O tabuleiro do jogo" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
+<%-- A lista de atributos dessa tag --%>
+<%@attribute name="locked" %>
+
 <%-- Outras tags requeridas para funcionar --%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <%-- O conteúdo é especificado aqui --%>
-<form>
+<form data-locked="${locked}">
 <div>
     <div class="board-row">
         <t:Square value="0" />

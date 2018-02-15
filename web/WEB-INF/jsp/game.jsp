@@ -11,8 +11,10 @@
         <meta charset="utf-8">
         <title>Jogo da Velha</title>
         <link rel="stylesheet" href="<c:url value="/game.css"/>" />
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body>
         <t:Game />
+        <script src="<c:url value="/game.js"/>"></script>
     </body>
 </html>

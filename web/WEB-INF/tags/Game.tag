@@ -16,7 +16,7 @@
 
 <div class="game">
     <div class="game-board">
-        <t:Board />
+        <t:Board locked="${game.winner != ' '}" />
     </div>
     <div class="game-info">
         <div>${status}</div>
