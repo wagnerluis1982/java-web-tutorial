@@ -14,6 +14,16 @@ public class GameServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Garante que o jogo do usuário exista
+        getGame(request);
+
+        // Passa a requisição para outro componente
+        RequestDispatcher jsp = request.getRequestDispatcher("/WEB-INF/jsp/game.jsp");
+        jsp.forward(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // O jogo do usuário atual
         GameApp game = getGame(request);
 
@@ -21,9 +31,8 @@ public class GameServlet extends HttpServlet {
         String paramSquare = request.getParameter("square");
         game.clickSquare(paramSquare);
 
-        // Passa a requisição para outro componente
-        RequestDispatcher jsp = request.getRequestDispatcher("/WEB-INF/jsp/game.jsp");
-        jsp.forward(request, response);
+        // Manda o browser fazer outro pedido, mas com o método GET
+        response.sendRedirect(".");
     }
 
     private static GameApp getGame(HttpServletRequest request) {

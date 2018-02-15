@@ -7,7 +7,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <%-- O conteúdo é especificado aqui --%>
-<form data-locked="${locked}">
+<form method="post" data-locked="${locked}">
 <div>
     <div class="board-row">
         <t:Square value="0" />
