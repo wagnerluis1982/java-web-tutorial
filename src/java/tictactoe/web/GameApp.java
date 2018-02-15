@@ -69,6 +69,10 @@ public class GameApp {
         return ' ';
     }
 
+    public int getHistorySize() {
+        return this.history.size();
+    }
+
     public Character[] getSquares() {
         return this.history.get(this.history.size() - 1);
     }

@@ -20,6 +20,11 @@
     </div>
     <div class="game-info">
         <div>${status}</div>
-        <ol><!-- A FAZER --></ol>
+        <ol>
+            <li><button>Ir para início do jogo</button></li>
+            <c:forEach var="move" begin="1" end="${game.historySize - 1}">
+                <li><button>Ir para movimento #${move}</button></li>
+            </c:forEach>
+        </ol>
     </div>
 </div>
