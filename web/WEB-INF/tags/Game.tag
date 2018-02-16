@@ -28,5 +28,8 @@
             </c:forEach>
         </ol>
         </form>
+        <c:if test="${game.historySize > 1}">
+            <div><a href="?restart=true">Reiniciar jogo</a></div>
+        </c:if>
     </div>
 </div>

@@ -14,6 +14,12 @@ public class GameServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Reinicia o jogo se solicitado
+        String paramRestart = request.getParameter("restart");
+        if ("true".equals(paramRestart)) {
+            restartGame(request);
+        }
+
         // Garante que o jogo do usuário exista
         getGame(request);
 
@@ -48,6 +54,11 @@ public class GameServlet extends HttpServlet {
         }
 
         return game;
+    }
+
+    private static void restartGame(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.invalidate();
     }
 
 }
