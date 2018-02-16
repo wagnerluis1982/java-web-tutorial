@@ -35,7 +35,7 @@ public class GameServlet extends HttpServlet {
         response.sendRedirect(".");
     }
 
-    private static GameApp getGame(HttpServletRequest request) {
+    public static GameApp getGame(HttpServletRequest request) {
         // A sessão atual do usuário
         HttpSession session = request.getSession();
 

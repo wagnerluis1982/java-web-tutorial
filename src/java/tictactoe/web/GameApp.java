@@ -6,6 +6,7 @@ import java.util.List;
 public class GameApp {
 
     private List<Character[]> history = new ArrayList<>(1);
+    private int stepNumber = 0;
     private char turn = 'X';
     private char winner = ' ';
 
@@ -33,13 +34,27 @@ public class GameApp {
         squares[index] = this.turn;
 
         // Modifica uma cópia do histórico
-        List<Character[]> history = new ArrayList<>(this.history);
+        List<Character[]> history = new ArrayList<>(this.history.subList(0, this.stepNumber + 1));
         history.add(squares);
 
         // Atualiza o estado do jogo
         this.history = history;
+        this.stepNumber += 1;
         this.turn = (this.turn == 'X') ? 'O' : 'X';
         this.winner = calculateWinner(squares);
+    }
+
+    public void jumpTo(String param) {
+        if (param != null) {
+            int step = Integer.parseInt(param);
+            jumpTo(step);
+        }
+    }
+
+    public void jumpTo(int step) {
+        this.stepNumber = step;
+        this.turn = (step % 2 == 0) ? 'X' : 'O';
+        this.winner = calculateWinner(getSquares());
     }
 
     private static char calculateWinner(Character[] squares) {
@@ -74,7 +89,7 @@ public class GameApp {
     }
 
     public Character[] getSquares() {
-        return this.history.get(this.history.size() - 1);
+        return this.history.get(this.stepNumber);
     }
 
     public char getTurn() {

@@ -20,11 +20,13 @@
     </div>
     <div class="game-info">
         <div>${status}</div>
+        <form action="<c:url value="/time-travel"/>" method="post">
         <ol>
-            <li><button>Ir para início do jogo</button></li>
+            <li><button name="step" value="0">Ir para início do jogo</button></li>
             <c:forEach var="move" begin="1" end="${game.historySize - 1}">
-                <li><button>Ir para movimento #${move}</button></li>
+                <li><button name="step" value="${move}">Ir para movimento #${move}</button></li>
             </c:forEach>
         </ol>
+        </form>
     </div>
 </div>
