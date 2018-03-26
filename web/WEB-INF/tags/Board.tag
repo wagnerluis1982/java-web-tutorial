@@ -4,25 +4,18 @@
 <%@attribute name="locked" %>
 
 <%-- Outras tags requeridas para funcionar --%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <%-- O conteúdo é especificado aqui --%>
 <form method="post" data-locked="${locked}">
 <div>
+<c:forEach var="i" begin="0" end="2">
     <div class="board-row">
-        <t:Square value="0" />
-        <t:Square value="1" />
-        <t:Square value="2" />
+    <c:forEach var="j" begin="${i*3}" end="${i*3 + 2}">
+        <t:Square value="${j}" />
+    </c:forEach>
     </div>
-    <div class="board-row">
-        <t:Square value="3" />
-        <t:Square value="4" />
-        <t:Square value="5" />
-    </div>
-    <div class="board-row">
-        <t:Square value="6" />
-        <t:Square value="7" />
-        <t:Square value="8" />
-    </div>
+</c:forEach>
 </div>
 </form>
