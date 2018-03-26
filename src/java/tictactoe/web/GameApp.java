@@ -80,8 +80,16 @@ public class GameApp {
             }
         }
 
-        // Ainda sem um vencedor
-        return ' ';
+        // Processa o tabuleiro novamente para ver se há empate, se algum quadrado
+        // ainda não tiver sido selecionado, então é um jogo em andamento.
+        for (Character q : squares) {
+            if (q == null) {
+                return ' ';
+            }
+        }
+
+        // Jogo empatado
+        return '-';
     }
 
     public int getHistorySize() {

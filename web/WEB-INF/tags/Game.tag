@@ -9,6 +9,9 @@
     <c:when test="${game.winner == ' '}">
         <c:set var="status" value="Próximo jogador: ${game.turn}" />
     </c:when>
+    <c:when test="${game.winner == '-'}">
+        <c:set var="status" value="Empate Técnico" />
+    </c:when>
     <c:otherwise>
         <c:set var="status" value="Vencedor: ${game.winner}" />
     </c:otherwise>
