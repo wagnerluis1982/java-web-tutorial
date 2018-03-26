@@ -22,9 +22,9 @@
         <div>${status}</div>
         <form action="<c:url value="/time-travel"/>" method="post">
         <ol>
-            <li><button name="step" value="0">Ir para início do jogo</button></li>
+            <li><button name="step" value="0" data-selected="${game.stepNumber == 0}">Ir para início do jogo</button></li>
             <c:forEach var="move" begin="1" end="${game.historySize - 1}">
-                <li><button name="step" value="${move}">Ir para movimento #${move}</button></li>
+                <li><button name="step" value="${move}" data-selected="${game.stepNumber == move}">Ir para movimento #${move}</button></li>
             </c:forEach>
         </ol>
         </form>

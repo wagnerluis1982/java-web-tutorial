@@ -44,3 +44,7 @@ ol, ul {
 .game-info {
   margin-left: 20px;
 }
+
+[data-selected="true"] {
+  font-weight: bold;
+}

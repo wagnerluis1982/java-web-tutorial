@@ -92,6 +92,10 @@ public class GameApp {
         return this.history.get(this.stepNumber);
     }
 
+    public int getStepNumber() {
+        return stepNumber;
+    }
+
     public char getTurn() {
         return this.turn;
     }
